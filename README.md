@@ -3,7 +3,7 @@ meteor-template
 
 My basic template for new Meteor projects.
 
-Templates: mquandalle:jade and a main.jade in client
+Templates: mquandalle:jade, and head.tpl.jade, home.tpl.jade in client
 Scripts: coffeescript
 Styles: cryptoquick:stylus-multi and a main.styl in client
 Routing: iron:router and some configuration
