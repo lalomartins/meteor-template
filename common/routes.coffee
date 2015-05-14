@@ -3,6 +3,6 @@ Router.map ->
         trackPageView: true
         templateNameConverter: (input) -> input.replace /-/g, '_'
 
-    @route 'home',
-        path: '/'
+    @route '/',
+        name: 'home'
         fastRender: true
