@@ -1,7 +1,7 @@
 Router.map ->
     @configure
         trackPageView: true
-        templateNameConverter: (input) -> input.replace /-/g, '_'
+        layoutTemplate: 'layout'
 
     @route '/',
         name: 'home'
