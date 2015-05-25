@@ -6,3 +6,8 @@ Router.map ->
     @route '/',
         name: 'home'
         fastRender: true
+        template: ->
+            if Meteor.userId()?
+                'home'
+            else
+                'landing'

@@ -16,9 +16,6 @@ meteorhacks:fast-render
 fortawesome:fontawesome
 random
 raix:eventemitter
-mjn:famous
-gadicohen:famous-views
-useraccounts:famous-wrapper
 accounts-password
 accounts-google
 accounts-facebook
@@ -27,3 +24,7 @@ kidovate:accounts-steam
 iamthemuffinman:accounts-persona
 mondora:connect-with
 splendido:accounts-meld
+meteoric:ionic
+useraccounts:ionic
+koolaid1551:ionic-stylus
+koolaid1551:ionicons-stylus
