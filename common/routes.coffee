@@ -6,8 +6,9 @@ Router.map ->
     @route '/',
         name: 'home'
         fastRender: true
-        template: ->
-            if Meteor.userId()?
-                'home'
-            else
-                'landing'
+
+    @route 'profile',
+        fastRender: true
+
+    @plugin 'ensureSignedIn',
+        except: ['atForgotPassword', 'about']
