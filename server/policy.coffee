@@ -11,3 +11,6 @@ BrowserPolicy.content.allowStyleOrigin 'https://themes.googleusercontent.com'
 BrowserPolicy.content.allowFontOrigin 'http://themes.googleusercontent.com'
 BrowserPolicy.content.allowFontOrigin 'http://fonts.gstatic.com'
 BrowserPolicy.content.allowFontOrigin 'https://fonts.gstatic.com'
+
+# avatar sources; must add others later on
+BrowserPolicy.content.allowImageOrigin 'https://secure.gravatar.com'
