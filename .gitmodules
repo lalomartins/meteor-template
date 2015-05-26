@@ -1,0 +1,6 @@
+[submodule "packages/ionicons-stylus"]
+	path = packages/ionicons-stylus
+	url = git@github.com:lalomartins/ionicons-stylus.git
+[submodule "packages/ionic-stylus"]
+	path = packages/ionic-stylus
+	url = git@github.com:lalomartins/ionic-stylus.git
