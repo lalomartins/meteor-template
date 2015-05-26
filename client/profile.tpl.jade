@@ -1,9 +1,13 @@
 +contentFor 'headerTitle'
     h1.title Profile
 
++contentFor 'headerButtonRight'
+    button.button.button-clear(data-ion-modal='profileEdit') Edit
+
 +ionView
     +ionContent
-        p Foo
+        with currentUser
+            +profileCard
 
 +contentFor 'tabs'
     +homeTabs
