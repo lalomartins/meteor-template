@@ -10,8 +10,32 @@ Meteor.publish 'player-avatars', ->
         'profile.avatarUrl': $exists: false
     .observe
         added: (userDoc) =>
-            console.log "adding avatar for #{userDoc._id}: #{Avatar.getUrl userDoc}"
             @added 'users', userDoc._id,
                 'profile.avatarUrl': Avatar.getUrl userDoc
     @onStop -> handle.stop()
     @ready()
+
+Meteor.users.allow
+    update: (userId, doc, fieldNames, modifier) ->
+        return false unless doc._id is userId
+        hasUsername = false
+        for field in fieldNames
+            switch
+                when field is 'username'
+                    hasUsername = true
+                when field is 'profile'
+                    #
+                else
+                    return false
+        if hasUsername
+            for op, fields of modifier
+                if op is '$set'
+                    newUsername = fields.username
+                    return false unless newUsername?
+                    newUsername = fields.username = newUsername.toLowerCase()
+                    return false if Meteor.users.find(username: newUsername).count() isnt 0
+                else
+                    return false if op.username?
+        return true
+
+    fetch: ['username', 'profile']
