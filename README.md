@@ -27,6 +27,6 @@ Clone, add/remove packages as needed, remove remote, add new remote, enjoy.
 Branches
 --------
 
-There's at the moment an "ionic" branch, which serves as a template for using Ionic via Meteoric. Other such branches may be added in the future.
+There's at the moment an `ionic` branch, which serves as a template for using Ionic via Meteoric, and a `ionic+profiles`, which builds user profiles on top of that. Other such branches may be added in the future.
 
 To use such a branch, simply check it out instead of master, and use that for your project.
